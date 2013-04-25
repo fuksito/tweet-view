@@ -1,0 +1,37 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  database: newsviewer_development
+  pool: 5
+  username: fuksito
+  password:
+  # socket: /tmp/mysql.sock
+  # adapter: postgresql
+  # encoding: utf8
+  # reconnect: false
+  # database: heroku_c4397763da348c7
+  # pool: 10
+  # username: b02a71cf0e8480
+  # password: 5bc6e545
+
+test: &test
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  database: newsviewer_test
+  pool: 5
+  username: fuksito
+  password:
+  # socket: /tmp/mysql.sock
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  database: heroku_c4397763da348c7
+  pool: 10
+  username: b02a71cf0e8480
+  password: 5bc6e545
+cucumber:
+  <<: *test

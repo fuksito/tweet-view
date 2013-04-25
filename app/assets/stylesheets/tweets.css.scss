@@ -1,0 +1,84 @@
+.tweet {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  font-family: "Helvetica Neue",​Arial,​sans-serif;
+  min-height: 60px;
+  .text {
+
+  }
+  .date {
+    float:right;
+    color: #999;
+    margin: 5px;
+    margin-right: 0;
+  }
+  .star {
+    margin-left: -50px;
+    float:left;
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    .star_icon {
+      cursor: pointer;
+      display: none;
+      background: image-url('star_bw.png');
+      width: 32px;
+      height: 32px;
+    }
+  }
+  .star.animated {
+    .star_icon {
+      background: image-url('32spin.gif');
+      display: block;
+    }
+  }
+
+  &:hover {
+    .star_icon {
+      display: block;
+    }
+  }
+}
+
+.tweet.favorite {
+  .star_icon {
+    display: block;
+    background: image-url('star.png');
+  }
+}
+
+.refresh {
+  cursor: pointer;
+  margin-top: 10px;
+  .hint {
+    display: none;
+    color: #999;
+  }
+  .refresh_icon {
+    background:  image-url('refresh_bw.gif');
+    width: 48px;
+    height: 48px;
+  }
+  &:hover {
+    .hint {
+      display: block;
+    }
+    .refresh_icon {
+      background:  image-url('refresh.gif');
+    }
+  }
+}
+.refresh.animated {
+  .refresh_icon {
+    background:  image-url('refresh_animated.gif');
+  }
+  .hint {
+    font-style: italic;
+  }
+}
+
+.remove_favorite {
+  position: absolute;
+  margin-left: -100px;
+}

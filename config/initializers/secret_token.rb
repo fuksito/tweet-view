@@ -1,0 +1,1 @@
+NewsViewer::Application.config.secret_token = 'd010bc0ce34d1d12e8c5f482abafc80m'

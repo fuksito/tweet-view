@@ -1,0 +1,16 @@
+#refresh.refresh
+  .refresh_icon
+  %p.hint Refresh
+%h1
+  = image_tag(@metadata.profile_image_url)
+  = @metadata.name + " tweets feed"
+
+%ul.nav.nav-tabs
+  %li.active=link_to 'Feed', root_path
+  %li=link_to 'Favorites', tweets_favorites_path
+
+#tweets_list
+  - @tweets.each do |tweet|
+    = render 'tweet', tweet: tweet
+%p
+  #more_tweets.btn.btn-large.btn-primary.btn-block Load more tweets

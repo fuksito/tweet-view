@@ -1,0 +1,11 @@
+%h1
+  = image_tag(@metadata.profile_image_url)
+  = @metadata.name + " Favorites"
+
+%ul.nav.nav-tabs
+  %li=link_to 'Feed', root_path
+  %li.active=link_to 'Favorites', tweets_favorites_path
+
+#tweets_list.favorites_list
+  - @tweets.each do |tweet|
+    = render 'tweet', tweet: tweet

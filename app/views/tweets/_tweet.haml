@@ -1,0 +1,5 @@
+.tweet{"data-tweet-id" => tweet.id, "class" => favorite_class(tweet.id) }
+  .star
+    .star_icon
+  .date= time_ago_in_words tweet.created_at
+  .text= tweet.text
